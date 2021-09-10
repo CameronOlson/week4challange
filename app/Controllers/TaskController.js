@@ -11,6 +11,7 @@ import { taskService } from "../Services/TaskService.js";
             constructor (){
                 console.log("hello from Task Controller")
                 ProxyState.on('tasks', _drawTask)
+                this.getTasks()
                 }
 
         createTask(){
@@ -23,7 +24,12 @@ import { taskService } from "../Services/TaskService.js";
             }
             taskService.createTask(taskData)
             console.log(taskData)
-            
-            // console.log('this is create task function', task)
+             
         }
+
+            getTasks(){
+                taskService.getTasks()
+            }
+            // console.log('this is create task function', task)
+        
     }

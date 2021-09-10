@@ -12,6 +12,12 @@ class TaskService {
         ProxyState.tasks = [...ProxyState.tasks, new Task(res.data)]
     }
 
+    async getTasks(){
+        let res = await api.get('')
+        ProxyState.tasks = res.data.map(t => new Task(t))
+        console.log("this should happen at the startup")
+    }
+
   }
 
 
