@@ -27,9 +27,24 @@ import { taskService } from "../Services/TaskService.js";
              
         }
 
+        toggleComplete(taskId){
+            taskService.toggleComplete(taskId)
+        }
+
+        async deleteTask(taskId){
+            if (window.confirm("you sure")){
+           try {
+            await taskService.deleteTask(taskId)
+           } catch (error) {
+               alert (error.message)
+           }
+        }
+        }
+    
             getTasks(){
                 taskService.getTasks()
             }
             // console.log('this is create task function', task)
         
     }
+ 

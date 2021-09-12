@@ -1,1 +1,33 @@
 /* BASIC STYLES HERE */
+body{
+    background-size: cover;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.visible:hover + .hide{
+    visibility: visible;
+}
+.my-card{
+    opacity: 1%;
+}
+
+.my-input{
+
+}
+
+input[type=text] {
+    background-color: none;
+    border: none;
+    border-bottom: 2px solid black;
+  }
+
+ 
+  .center-this {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    display: inline;
+  }

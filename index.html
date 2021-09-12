@@ -8,19 +8,19 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.1.95/css/materialdesignicons.min.css" integrity="sha512-0v4BqFdzbpwu0PfllBdLp5xk8WXB+wMy2trN84V/enFPaF2HVn/zFM+w9WcA0xqWkYVv6N9j40cXKMw81YTUxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>week4challange</title>
 </head>
-
-<body>
+<!-- This is the background image -->
+<body id="background-image">
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">week4challange</span>
+        <!-- This is the Temp TODO put an iage in  here too -->
+        <span class="ms-2" id="weather">week4challange</span>
       </a>
     </nav>
   </header>
@@ -37,17 +37,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-9"></div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <!-- This is the Clock -->
+          <div class="clock center-this" id="clock">
+           <h1><span class="clock-time"></span>
+            <span class="clock-ampm"></span></h1>
+          </div>
+        </div>
         <div class="col-lg-3">
-          <div class="card">
-            <div class="card-header">Task-List</div>
-            <div class="card-body" id="todoList">
+                <!-- This is my task list    -->
+          <div class="text wrap">
+            <div class="my-card">Task-List</div>
+            <div id="todoList">
+              <h6>Task List</h6>
               <form onsubmit="app.taskController.createTask()">
-                <label for="list-name" class="sr-only"></label>
-                <input type="text" minlength="3" name="description">
-                <button type="submit" class="btn btn-secondary">Add Task</button>
+                <label for="list-name"></label>
+                <input class="border-none" type="text" minlength="3" name="description">
+                <button type="submit" class="btn">Add Task</button>
               </form>
-              <div id="task"></div>
+                  <div id="task"></div>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -69,10 +81,9 @@
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
   <script src="app/main.js" type="module"></script>
+
 </body>
 
 </html>
 
-
-<li></li>
 

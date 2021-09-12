@@ -4,7 +4,6 @@ import { quoteService } from "../Services/QuoteService.js";
 
 //private
 function _drawQuote(){
-    let quote = ((ProxyState.quote.content) + (ProxyState.quote.author));
     let quotesTemplate = ''
     if (ProxyState.quote){
         quotesTemplate = ProxyState.quote.QuoteTemplate

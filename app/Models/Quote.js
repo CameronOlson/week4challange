@@ -8,7 +8,8 @@ export class Quote{
 
     get QuoteTemplate(){
         return /*html*/ `
-        <div>Quote of The Day ${this.content} ${this.author}</div>
+        <h5 class="visible"> ${this.content}</h5>
+        <h6 class="hide"> ${this.author}</h6>
         `
     }
 }
