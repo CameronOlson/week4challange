@@ -15,7 +15,7 @@ export class ClockController{
         const parts = this.getTimeParts();
         const minuteFormatted = parts.minute.toString().padStart(2, "0"); 
         const timeFormatted = `${parts.hour}:${minuteFormatted}`;
-        const amPm = parts.isAm ? "AM" : "PM" ;
+        const amPm = parts.isAm ? "a.m" : "p.m" ;
         console.log(timeFormatted);
 
         this.element.querySelector(".clock-time").textContent = timeFormatted;

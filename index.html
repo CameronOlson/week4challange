@@ -16,12 +16,6 @@
 <!-- This is the background image -->
 <body id="background-image">
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <!-- This is the Temp TODO put an image in  here too -->
-        <span class="ms-2" id="weather"></span>
-      </a>
-    </nav>
   </header>
   <main>
     <div class="col-12">
@@ -30,7 +24,6 @@
       <div class="row">
         <div class="col-12">
           <div id="app"></div>
-          <div id="quote"></div>
           <div id="img"></div>
           <div><ul id="list"></ul></div>
         </div>
@@ -39,35 +32,50 @@
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
           <!-- This is the Clock -->
-          <div class="clock center-this" id="clock">
+          
+            
+          <div class="clock text-outlined center-this" id="clock">
            <h1><span class="clock-time"></span>
             <span class="clock-ampm"></span></h1>
+            <span class="ms-2 selectable" id="weather"></span>
           </div>
+        
+
         </div>
-        <div class="col-lg-3">
-                <!-- This is my task list    -->
-          <div class="text wrap">
-            <div class="my-card">Task-List</div>
-            <div id="todoList">
-              <h6>Task List</h6>
-              <form onsubmit="app.taskController.createTask()">
-                <label for="list-name"></label>
-                <input class="border-none" type="text" minlength="3" name="description">
-                <button type="submit" class="btn">Add Task</button>
-              </form>
-                  <div id="task"></div>
-                </div>
-              </div>
-              
+        <div class="col=lg-3"></div>
+        
+            
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer class="bg-dark text-light">
-    <div class="text-center no-select">
+  <footer>
+    <div class="row">
+<div class="col-lg-10"></div>
+      <div class="col-lg-2 m-2">
+        <!-- This is my task list    -->
+        <div class="card my-card">
+          <div class="card-body">
+            <div class="text wrap">
+                <form onsubmit="app.taskController.createTask()" class="pt-0 mt-0">
+                  <label for="list-name"></label>
+                  <input class="bg-black text-light" placeholder="Task List" type="text" minlength="3" name="description">
+                  <button type="submit" class="btn text-light">Add Task</button>
+                </form>
+                <div id="task"></div>
+            
+            </div>
+          </div> 
+        </div>
+          
     </div>
+
+    </div>
+      <div class="row">
+        <div class="col-12 text-center bg-black"><div id="quote"></div></div>
+
   </footer>
 
 

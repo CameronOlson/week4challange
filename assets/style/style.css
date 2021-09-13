@@ -11,14 +11,32 @@ body{
     visibility: visible;
 }
 .my-card{
-    opacity: 1%;
+    background-color: #0e0d0d;
+    color: white;
+    opacity: 75%;
+    height: 15rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.bg-black{
+    background-color: #0e0d0d;
+    color: white;
+    opacity: 50%;
 }
 
-input[type=text] {
+
+.text-outlined{
+        color: white;
+        font-size: 40px;
+        -webkit-text-stroke: 1px black;
+    }
+
+
+/* input[type=text] {
     background-color: none;
     border: none;
     border-bottom: 2px solid black;
-  }
+  } */
 
  
   .center-this {

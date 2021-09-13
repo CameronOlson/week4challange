@@ -10,9 +10,10 @@ export class Task {
 
     get TaskTemplate(){
         return /*html*/`
+        
         <li class="d-flex justify-content-between">
         <span><input type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.taskController.toggleComplete('${this.id}')"></span>
-        <span class="p-2"><p>${this.description}</p></span>
+        <p class="fw-lighter p-2">${this.description}</p>
         <span><i class="mdi mdi-delete selectable" onclick="app.taskController.deleteTask('${this.id}')"></i></span>
         </li>
         `
